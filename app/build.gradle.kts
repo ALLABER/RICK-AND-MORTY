@@ -36,6 +36,9 @@ android {
 }
 
 dependencies {
+    implementation(projects.core.domain)
+    implementation(projects.core.data)
+
     implementation(projects.ui.assets)
     implementation(projects.ui.localization)
     implementation(projects.ui.system)
