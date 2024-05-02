@@ -1,3 +1,7 @@
 package com.allaber.domain.repository
 
-interface RickAndMortyRepository
+import com.allaber.domain.model.Character
+
+interface RickAndMortyRepository {
+    fun getAllCharacters(): List<Character>
+}
