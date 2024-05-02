@@ -36,6 +36,9 @@ android {
 }
 
 dependencies {
+    implementation(projects.ui.assets)
+    implementation(projects.ui.localization)
+    implementation(projects.ui.system)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
