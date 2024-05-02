@@ -5,14 +5,14 @@ plugins {
 
 android {
     namespace = "com.allaber.rickandmorty"
-    compileSdk = 34
+    compileSdk = AppConfig.COMPILE_SDK_VERSION
 
     defaultConfig {
         applicationId = "com.allaber.rickandmorty"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = AppConfig.MIN_SDK_VERSION
+        targetSdk = AppConfig.TARGET_SDK_VERSION
+        versionCode = AppConfig.VERSION_CODE
+        versionName = AppConfig.VERSION_NAME
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -21,17 +21,17 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                getDefaultProguardFile(ProGuard.PROGUARD_ANDROID_OPTIMIZE),
+                ProGuard.CONSUMER_RULES
             )
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = AppConfig.SOURCE_COMPATIBILITY
+        targetCompatibility = AppConfig.TARGET_COMPATIBILITY
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = AppConfig.JVM_TARGET
     }
 }
 
